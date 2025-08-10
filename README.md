@@ -1,1 +1,0 @@
-# Ridiculously-Simple-Data-Driven-Air-Pollution-Interpolation-Method
