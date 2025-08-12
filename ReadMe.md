@@ -26,6 +26,7 @@ compare_with_ui;   % run visual + numeric comparison (guided UI)
 ├── src/                  # MATLAB source code
 │   ├── RSIM_main.m       # RSIM training & evaluation pipeline
 │   └── compare_with_ui.m # Visual & numeric comparison script
+├── NetFile.mat          # Pre-trained RSIM network for the example dataset
 └── README.md
 ```
 
@@ -44,6 +45,22 @@ Each `.mat` file in `data/` contains:
 - `sensors` — `(row, col)` coordinates of available sensors (1-based indexing)
 
 The provided files are **synthetic data** for demonstration and testing.
+
+---
+
+### Pre-trained Network
+
+The file **`NetFile.mat`** contains a pre-trained RSIM network trained on the synthetic dataset in the `data/` folder.  
+It allows you to run RSIM predictions in `compare_with_ui` without re-training.
+
+**Contents:**
+- `net` — a trained MATLAB `DAGNetwork` object.
+- **Input:** sensor readings vector (`SensorNum × 1 × 1`) matching the `sensors` layout in each `.mat` file.
+- **Output:** predicted pollution map (`H × W`) matching the ground truth `X`.
+
+**Usage in `compare_with_ui`:**
+1. When prompted for an RSIM network, select `NetFile.mat`.
+2. Ensure the chosen `SensorNum` matches the network’s training setup (default: `30`).
 
 ---
 
