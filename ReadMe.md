@@ -9,9 +9,9 @@ This repository contains MATLAB code and example synthetic data for reproducing 
 ## Quick Start
 ```matlab
 addpath('src');
-compare_with_ui;   % run visual + numeric comparison (guided UI)
-% or
 RSIM_main;         % train & evaluate RSIM on the selected dataset
+% or
+compare_with_ui;   % run visual + numeric comparison (guided UI)
 ```
 
 ---
