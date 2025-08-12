@@ -49,7 +49,14 @@ The provided files are **synthetic data** for demonstration and testing.
 
 ## How to Use
 
-### 1) Run the comparison UI
+### 1) Train and evaluate RSIM
+```matlab
+addpath('src');
+RSIM_main;
+```
+- Trains a linear RSIM model on the selected dataset and evaluates performance.
+
+### 2) Run the comparison UI
 ```matlab
 addpath('src');
 compare_with_ui;
@@ -63,13 +70,6 @@ compare_with_ui;
 **Outputs (if saving enabled):**
 - `panel_###.png` — visual panel for selected samples
 - `summary_metrics.csv` — average RMSE and correlation per method
-
-### 2) Train and evaluate RSIM
-```matlab
-addpath('src');
-RSIM_main;
-```
-- Trains a linear RSIM model on the selected dataset and evaluates performance.
 
 ---
 
